@@ -44,6 +44,7 @@ if($row= mysqli_fetch_array($resultado)){
 			       $_SESSION["usuario"]= $row["correo"];
                    $_SESSION["nivel"]= $row["tipo_usuario"];
 			       $_SESSION["imagen"]= $row["foto"];
+			       $_SESSION["rellenado"]= $row["rellenado"];
 	
              /*redireccionamos al dashboard*/
 	
@@ -62,6 +63,3 @@ if($row= mysqli_fetch_array($resultado)){
 	header('Location: ../index.php?invalid="true"');
  
 }
-
-
-?>

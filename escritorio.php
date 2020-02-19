@@ -1,6 +1,6 @@
-﻿<?php 
+﻿<?php
 if (!isset($_SESSION)) {
-  session_start();
+    session_start();
 }
 
 include("usuario/consultas_generales.php");
@@ -42,8 +42,7 @@ include("escritorio/publicaciones.php");
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img class="navbar-brand" style="width: 350px; cursor: pointer" src="imagenes/logo_sm.png"
-                    onClick="window.location='index.php';"><a class="navbar-brand" href="index.html"></a>
+                <img class="navbar-brand" style="width: 350px; cursor: pointer" src="imagenes/logo_sm.png" onClick="window.location='index.php';"><a class="navbar-brand" href="index.html"></a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -179,118 +178,137 @@ include("escritorio/publicaciones.php");
         </nav>
         <!--/. NAV TOP  -->
         <!--/. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-
-                    <div class="navbar"><img src="<?php echo $row_user['foto']?>"
-                            style="display: block; width:100px; height: 100px; border-radius: 100%; margin-top: 35px;margin-right: auto; margin-left: auto;">
-
-                        <header class="section-header" style="padding-top: 5px;">
-                            <h2 class="text-center" style="color: #fff;font-size: 18px;"><?php echo $row_user['correo']?></h2>
-                            <p class="text-center" style="color: #fff;"><?php echo $row_user['tipo']?></p>
-                        </header>
-
-
-                    </div>
-                    <li>
-                        <a href="escritorio.php" class="active-menu"><i class="fa fa-dashboard"></i>Escritorio</a>
-                    </li>
-                    <li>
-                        <a href="usuario.php"><i class="fa fa-user" style="font-size: 30px;"></i>Usuario</a>
-                    </li>
-                    <li>
-                        <a href="publicar.php"><i class="fa fa-bar-chart-o"></i>Publicar</a>
-                    </li>
-
-
-
-
-                </ul>
-
-            </div>
-
-        </nav>
-        <!-- /. NAV SIDE  -->
-        <div id="page-wrapper">
-
-            <?php if ($row_user['tipo'] == 'Administrador') { ?>
-            <div id="banner"><img src="<?php echo $row_user['foto_banner']?>" alt=""></div>
-            <?php } ?>
-
-            <div id="page-inner">
-
-
-                <!-- <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="page-header">Escritorio
-                        </h1>
-                    </div>
-                </div> -->
-
-                <div class="row">
-                    <div class="col-md-12">
-
-                        <h2 class="text-center">Mis Publicaciones</h2>
-
-                    </div>
-                </div>
-                <!-- /. PUBLICACIONES ROW  -->
-
-                <div class="row" style="margin-top: 30px;">
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="carta centrarCaja">
-                            <table>
-                                <tbody>
-                                    <tr >
-                                    <?php $contador=1;?>
-                                        <?php while($row2=mysqli_fetch_array($publi)){ ?>
-                                            <?php if($contador==4){$contador=1; echo "<br><br><tr>";}?>        
-                                        <td>
-
-                                            <div class="card" style="display: inline-block; cursor:pointer; width: 41rem; border: solid 2px; margin-left: 5px; border-radius:5px;">
-                                                <img class="card-img-top" alt="Card image cap" style="height: 250px; width: 406px;" src="<?php echo $row2['imagen1'];?>">
-                                                <div class="card-header">
-                                                    <h3 class="card-title"><p class="text-center" style="font-size: 20px; margin-bottom: 25px;"><strong><?php echo number_format($row2['precio'],0, ".", ".");?>
-                                                                USD</strong></p></h3>
-                                                </div>
-
-                                                <ul class="list-group list-group-flush" style="width: 39rem; padding-left: 10px;">
-                                                    <li class="list-group-item" style="height: 5rem; "><p class="card-text" style="padding-top: 3px;">
-                                                            Año: <?php echo $row2['ano'];?></p></li>
-                                                    <li class="list-group-item" style="height: 5rem; "><p class="card-text" style="padding-top: 3px;">
-                                                            KM: <?php echo number_format($row2['km'],0, ".", ".")?></p></li>
-                                                    <li class="list-group-item" style="height: 5rem; "><p class="card-text" style="padding-top: 3px;">
-                                                            Marca: <?php echo $row2['marca'];?></p></li>
-                                                    <li class="list-group-item" style="height: 5rem; "> <p class="card-text" style="padding-top: 3px;">
-                                                            Modelo: <?php echo $row2['modelo'];?></p></li>
-                                                </ul>
-                                                <div class="text-center" style="margin-bottom: 10px;">
-                                                    <button class="btn btn-primary center"
-                                                            onClick="mostrarVehi(<?php echo $row2['cod_vehiculo'];?>), $('#miModaleditar').modal('show');">Editar</button>
-                                                    <button class="btn btn-danger center"
-                                                            onClick="eliminarVehi(<?php echo $row2['cod_vehiculo'];?>), $('#miModalborrar').modal('show');">Eliminar</button>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <br>
-                                        </td>
-                                        <?php  $contador=$contador+1; }  ?>   
-                                    </tr>
-                                </tbody>
-                            </table>
+        <?php if (!$_SESSION['rellenado']) : ?>
+            <div id="page-wrapper" style="margin:0; min-height:0">
+                <div id="page-inner" style="margin:0; min-height:0">
+                    <div id="rellenar-datos">
+                        <div id="usuario-empresa">
+                            <h1>¿Que tipo de usuario eres?</h1>
+                            <div class="tarjetas">
+                                <div class="tarjeta" data-tipo="usuario">
+                                    <span class='fa fa-user'></span>
+                                    <h1>Usuario</h1>
+                                </div>
+                                <div class="tarjeta" data-tipo="empresa">
+                                    <span class='fa fa-building-o'></span>
+                                    <h1>Empresa</h1>
+                                </div>
+                            </div>
+                            <button id='send-user-type'>Enviar</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <script src="assets/js/jquery-1.10.2.js"></script>
+            <script src="assets/js/jsEscritorio.js"></script>
+        <?php else : ?>
+            <nav class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+
+                        <div class="navbar"><img src="<?php echo $row_user['foto'] ?>" style="display: block; width:100px; height: 100px; border-radius: 100%; margin-top: 35px;margin-right: auto; margin-left: auto;">
+
+                            <header class="section-header" style="padding-top: 5px;">
+                                <h2 class="text-center" style="color: #fff;font-size: 18px;"><?php echo $row_user['correo'] ?></h2>
+                                <p class="text-center" style="color: #fff;"><?php echo $row_user['tipo'] ?></p>
+                            </header>
+
+
+                        </div>
+                        <li>
+                            <a href="escritorio.php" class="active-menu"><i class="fa fa-dashboard"></i>Escritorio</a>
+                        </li>
+                        <li>
+                            <a href="usuario.php"><i class="fa fa-user" style="font-size: 30px;"></i>Usuario</a>
+                        </li>
+                        <li>
+                            <a href="publicar.php"><i class="fa fa-bar-chart-o"></i>Publicar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+
+                <?php if ($row_user['tipo'] == 'Administrador') { ?>
+                    <div id="banner"><img src="<?php echo $row_user['foto_banner'] ?>" alt=""></div>
+                <?php } ?>
+                <div id="page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <h2 class="text-center">Mis Publicaciones</h2>
+
+                        </div>
+                    </div>
+                    <!-- /. PUBLICACIONES ROW  -->
+
+                    <div class="row" style="margin-top: 30px;">
+                        <div class="col-md-3 col-sm-12 col-xs-12">
+                            <div class="carta centrarCaja">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <?php $contador = 1; ?>
+                                            <?php while ($row2 = mysqli_fetch_array($publi)) { ?>
+                                                <?php if ($contador == 4) {
+                                                    $contador = 1;
+                                                    echo "<br><br><tr>";
+                                                } ?>
+                                                <td>
+
+                                                    <div class="card" style="display: inline-block; cursor:pointer; width: 41rem; border: solid 2px; margin-left: 5px; border-radius:5px;">
+                                                        <img class="card-img-top" alt="Card image cap" style="height: 250px; width: 406px;" src="<?php echo $row2['imagen1']; ?>">
+                                                        <div class="card-header">
+                                                            <h3 class="card-title">
+                                                                <p class="text-center" style="font-size: 20px; margin-bottom: 25px;"><strong><?php echo number_format($row2['precio'], 0, ".", "."); ?>
+                                                                        USD</strong></p>
+                                                            </h3>
+                                                        </div>
+
+                                                        <ul class="list-group list-group-flush" style="width: 39rem; padding-left: 10px;">
+                                                            <li class="list-group-item" style="height: 5rem; ">
+                                                                <p class="card-text" style="padding-top: 3px;">
+                                                                    Año: <?php echo $row2['ano']; ?></p>
+                                                            </li>
+                                                            <li class="list-group-item" style="height: 5rem; ">
+                                                                <p class="card-text" style="padding-top: 3px;">
+                                                                    KM: <?php echo number_format($row2['km'], 0, ".", ".") ?></p>
+                                                            </li>
+                                                            <li class="list-group-item" style="height: 5rem; ">
+                                                                <p class="card-text" style="padding-top: 3px;">
+                                                                    Marca: <?php echo $row2['marca']; ?></p>
+                                                            </li>
+                                                            <li class="list-group-item" style="height: 5rem; ">
+                                                                <p class="card-text" style="padding-top: 3px;">
+                                                                    Modelo: <?php echo $row2['modelo']; ?></p>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="text-center" style="margin-bottom: 10px;">
+                                                            <button class="btn btn-primary center" onClick="mostrarVehi(<?php echo $row2['cod_vehiculo']; ?>), $('#miModaleditar').modal('show');">Editar</button>
+                                                            <button class="btn btn-danger center" onClick="eliminarVehi(<?php echo $row2['cod_vehiculo']; ?>), $('#miModalborrar').modal('show');">Eliminar</button>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                </td>
+                                            <?php $contador = $contador + 1;
+                                            }  ?>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endif ?>
         <!-- /.FINAL PUBLICACION ROW  -->
     </div>
 
     <!-- /.modal borrar  -->
 
-    <div class="modal fade" id="miModalborrar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="miModalborrar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -315,7 +333,7 @@ include("escritorio/publicaciones.php");
                     <div class="row">
 
                         <div id="eliminar"></div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -323,8 +341,7 @@ include("escritorio/publicaciones.php");
     </div>
 
 
-    <div class="modal fade" id="miModaleditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="miModaleditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="width: 800px;">
                 <div class="modal-header">
@@ -352,8 +369,8 @@ include("escritorio/publicaciones.php");
     <!-- /. PAGE WRAPPER  -->
     </div>
 
-   
-   
+
+
     <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->

@@ -1,93 +1,89 @@
-
 @charset "utf-8";
 
-
-body{
+body {
   /*font-family:;*/
-  color: #201F1F;
+  color: #201f1f;
 }
 
-
-
-
-
-.banner div{
-	color: #fff;
+.banner div {
+  color: #fff;
 }
-.fondo{
-  background-color:#ffef20;
+.fondo {
+  background-color: #ffef20;
 }
 
 .zoom {
-
-  transition: transform .2s; /* Animation */
+  transition: transform 0.2s; /* Animation */
   width: 100px;
   height: 100px;
   margin: 0px auto;
 }
 
 .zoom:hover {
-  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(
+    1.1
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
-h1{
-	letter-spacing: 3px;
+h1 {
+  letter-spacing: 3px;
 }
 
-.contact h4{
-	font-weight: bold;
-	margin-bottom: 30px;
+.contact h4 {
+  font-weight: bold;
+  margin-bottom: 30px;
   font-family: "Palatino", sans-serif;
 }
 
-.us div{
-	color: #fff !important;
+.us div {
+  color: #fff !important;
 }
 
-.us h1, .us h3{
-	text-align: justify;
+.us h1,
+.us h3 {
+  text-align: justify;
 }
 
-.us h1{
-	font-weight: bold;
+.us h1 {
+  font-weight: bold;
 }
 
-#search h4, #sign-in h4{
-	font-weight: bold;
-	margin-bottom: 30px;
+#search h4,
+#sign-in h4 {
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-#search h5{
-	margin-bottom: 20px;
+#search h5 {
+  margin-bottom: 20px;
 }
 
-#search .gray-border h5{
-	font-weight: bold;
+#search .gray-border h5 {
+  font-weight: bold;
 }
 
-button{
-	font-weight: bold;
+button {
+  font-weight: bold;
 }
 
-.button-container{
-	width: 150px;
+.button-container {
+  width: 150px;
 }
 
-footer h5{
-	font-weight: bold;
-	margin-bottom: 30px;
+footer h5 {
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
-.sign-in .centered-above{
-	transform: translate(-50%, -35%);
+.sign-in .centered-above {
+  transform: translate(-50%, -35%);
 }
 
-.navbar-brand img{
+.navbar-brand img {
   cursor: pointer;
-
 }
 
-.publ{
+.publ {
   width: 110px;
   height: 80px;
   display: block;
@@ -97,31 +93,34 @@ footer h5{
   margin-bottom: -10px;
 }
 
-.carta{
-  
+.carta {
   height: 260px;
   width: 200px;
   display: contents;
 }
-.navbar{
-	font-weight: bold;
+.navbar {
+  font-weight: bold;
   background-color: #ffef20;
   min-height: 5px;
 }
 
-.search{
+.search {
   width: 400px;
   margin-left: -200px;
 }
 
-@media (max-width: 990px){
-  .search{
-   width: 300px;
-  margin-left: -150px;
+@media (max-width: 990px) {
+  .search {
+    width: 300px;
+    margin-left: -150px;
   }
 }
 
-.search input[type=text], .register-mail input[type=text],.faq-search input[type=text], input, textarea {
+.search input[type="text"],
+.register-mail input[type="text"],
+.faq-search input[type="text"],
+input,
+textarea {
   padding: 10px;
   font-size: 17px;
   border: 0;
@@ -131,7 +130,8 @@ footer h5{
   background: #fff;
 }
 
-input, textarea{
+input,
+textarea {
   margin-bottom: 20px;
   width: 100%;
 }
@@ -140,7 +140,7 @@ textarea {
   resize: none;
 }
 
-.search button{
+.search button {
   float: left;
   width: 16%;
   padding: 1px;
@@ -152,7 +152,7 @@ textarea {
   cursor: pointer;
 }
 
-.filters button{
+.filters button {
   float: left;
   width: 20%;
   padding: 10px;
@@ -163,15 +163,16 @@ textarea {
   cursor: pointer;
 }
 
-.faq-search{
-  width: auto
+.faq-search {
+  width: auto;
 }
 
-.register-mail input[type=text], .faq-search input[type=text]{
+.register-mail input[type="text"],
+.faq-search input[type="text"] {
   width: 70%;
 }
 
-.register-mail button{
+.register-mail button {
   float: left;
   width: 30%;
   padding: 10px;
@@ -181,17 +182,18 @@ textarea {
   cursor: pointer;
 }
 
-.faq-search{
+.faq-search {
   margin-top: 6rem;
   width: 700px;
 }
 
-.faq-search input[type=text]{
+.faq-search input[type="text"] {
   width: 75%;
   margin-right: 5%;
 }
 
-.faq-search button, button{
+.faq-search button,
+button {
   float: left;
   width: 20%;
   padding: 10px;
@@ -206,24 +208,24 @@ textarea {
   color: #fff;
 }
 
-.register-mail button:hover{
+.register-mail button:hover {
   background: #ababab;
   color: #fff;
 }
 
-
-.search::after, .register-mail::after {
+.search::after,
+.register-mail::after {
   content: "";
   clear: both;
   display: table;
 }
 
-.navbar-logo{
+.navbar-logo {
   width: 300px;
   height: 25px;
 }
 
-.nav-tabs{
+.nav-tabs {
   height: 0px;
 }
 
@@ -250,183 +252,172 @@ footer {
 }
 
 hr {
-    border: none;
-    height: 1px;
-    color: #525252;
-    background-color: #525252;
+  border: none;
+  height: 1px;
+  color: #525252;
+  background-color: #525252;
 }
 
-ul li{
-  margin-bottom:10px;
+ul li {
+  margin-bottom: 10px;
 }
 
-.logos{
-	margin-top: 100px
+.logos {
+  margin-top: 100px;
 }
 
-.logos .slide img{
-    margin: 0 auto;
-    filter: grayscale(100%) brightness(3);
+.logos .slide img {
+  margin: 0 auto;
+  filter: grayscale(100%) brightness(3);
 }
 
-.logos .slide img:hover{
-    filter: grayscale(0%);
+.logos .slide img:hover {
+  filter: grayscale(0%);
 }
 
-.gray-border{
+.gray-border {
   border-style: solid;
   border-width: 2px;
   border-color: #d1d1d1;
   height: 220px;
 }
 
-.dark-border{
+.dark-border {
   border-style: solid;
   border-width: 2px;
   border-color: #3f3f3f;
 }
 
-
-.card-img-top{
+.card-img-top {
   height: 110px;
 }
 
-
-.im{
+.im {
   height: 180px;
-
 }
 
-.wid{
+.wid {
   width: 100px;
 }
 
-.card-text{
+.card-text {
   margin-top: -10px;
   width: 200px;
-
 }
 
-.us, .contact, .help, .login, .sign-in{
-   margin-bottom: 0px;
-   position: relative;
-   text-align: center;
-   color: white;
+.us,
+.contact,
+.help,
+.login,
+.sign-in {
+  margin-bottom: 0px;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 .padre {
-  margin-top:auto;
+  margin-top: auto;
   height: 100px;
   width: 1450px;
   padding-top: 5px;
 }
 
-.card-body{
+.card-body {
   text-align: left;
   width: 200px;
   margin-right: auto;
   margin-left: auto;
-
-
-
-
 }
 
-.huj{
-margin-top: 50px;
+.huj {
+  margin-top: 50px;
 }
 
-.tam{
-font-size: 25px;
-
-
-
-
+.tam {
+  font-size: 25px;
 }
 
-.banner{
+.banner {
   margin-bottom: 0px;
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 1200px;
-    height: 500px;
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 1200px;
+  height: 500px;
 }
 
+.contact {
+  height: 600px;
+}
 
-  .contact{
-    height: 600px
-  }
-
-  .login{
-    height: 600px
-  }
+.login {
+  height: 600px;
+}
 .centered {
-   position: absolute;
-   top: 50%;
-   left: 47%;
-   transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  transform: translate(-50%, -50%);
 }
 .centered1 {
-   position: absolute;
-   top: 40%;
-   margin: 350px;
+  position: absolute;
+  top: 40%;
+  margin: 350px;
   padding: 1rem;
   text-align: center;
-   transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .centered2 {
-   position: absolute;
+  position: absolute;
 
-   left: 47%;
-   transform: translate(-50%, -50%);
+  left: 47%;
+  transform: translate(-50%, -50%);
 }
 
-
-.us .centered{
-	width: 70%;
-	transform: translate(-60%, -60%);
+.us .centered {
+  width: 70%;
+  transform: translate(-60%, -60%);
 }
 
-
-.p{
-   margin-bottom: 0px !important;
+.p {
+  margin-bottom: 0px !important;
 }
 
 .centered-above {
-   position: absolute;
-   top: 40%;
-   left: 50%;
-   transform: translate(-50%, -40%);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
 }
 
-ul li div img{
+ul li div img {
   margin-bottom: 20px;
 }
 
-.filter-bar h5{
-	font-weight: bold;
+.filter-bar h5 {
+  font-weight: bold;
 }
 
-.filter-bar{
-	margin-top: -130px;
+.filter-bar {
+  margin-top: -130px;
 
-
-	position: absolute;
-	width: 100%;
+  position: absolute;
+  width: 100%;
 }
 
-.filter-bar div{
-	background-color: #ffef20;
+.filter-bar div {
+  background-color: #ffef20;
 }
 
-.filters, .filters button{
+.filters,
+.filters button {
   color: #3f3f3f;
   background-color: #f1f1f1;
 }
 
-.filter-bar div div{
-	background-color: #f1f1f1;
+.filter-bar div div {
+  background-color: #f1f1f1;
 }
 
 .tint:before {
@@ -437,318 +428,271 @@ ul li div img{
   bottom: 0;
   left: 0;
   right: 0;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 }
 
-.tint-gray:before { background: rgba(142,142,142, 0.5); }
-
-.tint-yellow:before { background: rgba(133,123,0, 0.5); }
-
-.tint-yellow-light:before { background: rgba(255,246,127, 0.5); }
-
-.us p, .contact, .login, .sign-in{
-  text-align:justify;
+.tint-gray:before {
+  background: rgba(142, 142, 142, 0.5);
 }
 
-footer li{
+.tint-yellow:before {
+  background: rgba(133, 123, 0, 0.5);
+}
+
+.tint-yellow-light:before {
+  background: rgba(255, 246, 127, 0.5);
+}
+
+.us p,
+.contact,
+.login,
+.sign-in {
+  text-align: justify;
+}
+
+footer li {
   cursor: pointer;
 }
 
-p img{
+p img {
   margin-right: 10px;
 }
 
-.car-photos div img{
-  width: 100%
+.car-photos div img {
+  width: 100%;
 }
 
-.login-form{
+.login-form {
   width: 600px;
 }
 
-.gray{
+.gray {
   background-color: #d1d1d1;
 }
 
-.join{
+.join {
   margin-bottom: 15rem;
 }
 
-@media (max-width: 992px){
-  .register-mail input[type=text]{
-  width: 100%;
-  margin-bottom: 0px;
+@media (max-width: 992px) {
+  .register-mail input[type="text"] {
+    width: 100%;
+    margin-bottom: 0px;
   }
-  .register-mail button{
+  .register-mail button {
     width: 100%;
   }
 
-  .search{
+  .search {
     margin-top: 20px;
-  width: 100%;
-  margin-left: 0px;
+    width: 100%;
+    margin-left: 0px;
   }
 }
 
-@media (max-width: 992px){
-  .register-mail input[type=text]{
-  width: 100%;
-  margin-bottom: 0px;
+@media (max-width: 992px) {
+  .register-mail input[type="text"] {
+    width: 100%;
+    margin-bottom: 0px;
   }
-  .register-mail button{
+  .register-mail button {
     width: 100%;
   }
-  .goha{
+  .goha {
     margin-bottom: 100px;
   }
-
-
 }
 
-
-
-@media (max-width: 576px){
-  .centered1{
+@media (max-width: 576px) {
+  .centered1 {
     margin-left: 130px;
   }
-
 }
 
-
-@media(max-width: 1200px){
-  .search{
+@media (max-width: 1200px) {
+  .search {
     margin-top: 20px;
-  width: 100%;
-  margin-left: 0px;
+    width: 100%;
+    margin-left: 0px;
   }
 
-  .filter-bar{
+  .filter-bar {
     position: relative;
-    display:none;
-
+    display: none;
   }
-  .goha{
+  .goha {
     margin-top: 0px;
   }
-
 }
 
-
-
-
-@media (max-width: 980px){
-  .register-mail input[type=text]{
-  width: 100%;
-  margin-bottom: 0px;
+@media (max-width: 980px) {
+  .register-mail input[type="text"] {
+    width: 100%;
+    margin-bottom: 0px;
   }
 
-
-  .register-mail button{
+  .register-mail button {
     width: 100%;
   }
 
-  .up
-  {
+  .up {
     position: relative;
-    display:none;
-
-  }
-
-
-}
-
-
-@media (max-width: 768px){
-  .md-hide{
     display: none;
   }
-  .register-mail input[type=text]{
-  width: 70%;
 }
 
-
-.register-mail button{
-  width: 30%;
-}
-
-.faq-search{
-  width: 100%;
-}
-
-.help .centered-above{
-  width: 90%;
-}
-
-.contact .centered-above{
-  width: 90%;
-}
-  .contact{
-    height: 1200px
+@media (max-width: 768px) {
+  .md-hide {
+    display: none;
+  }
+  .register-mail input[type="text"] {
+    width: 70%;
   }
 
-  .login{
+  .register-mail button {
+    width: 30%;
+  }
+
+  .faq-search {
+    width: 100%;
+  }
+
+  .help .centered-above {
+    width: 90%;
+  }
+
+  .contact .centered-above {
+    width: 90%;
+  }
+  .contact {
+    height: 1200px;
+  }
+
+  .login {
     height: 450px;
   }
-
-
-
 }
 
+@media (min-width: 600px) {
+  .op {
+    display: none;
+  }
 
-
-
-
-
-@media (min-width: 600px){
-
-.op{ display: none;
-	}
-
-
-.log{
+  .log {
     margin-top: 300px;
     width: 80px;
     height: 20px;
   }
 
-.tuyo{
-
+  .tuyo {
+  }
+  .mio {
+    margin-top: 350px;
+  }
 }
-.mio{
-  margin-top: 350px;
-}
-
-}
-
-
-
 
 @media (min-width: 576px) {
-
-  .mio{
+  .mio {
     margin-top: 160px;
   }
-  .ban{
+  .ban {
     margin-top: 130px;
     margin-bottom: -80px;
   }
 
-  .log{
+  .log {
     margin-top: 190px;
     width: 500px;
     height: 25px;
-
   }
 
-  .huj{
-	margin-top: 80px;
+  .huj {
+    margin-top: 80px;
   }
 
-
-  .banner{
+  .banner {
     height: 400px;
   }
   /* .navbar-brand img{
     width: 70%;
   } */
 
-  .faq-search input[type=text]{
-  width: 70%;
-  margin-right: 0%;
-}
-.faq-search button, button{
-  width: 25%;
-}
+  .faq-search input[type="text"] {
+    width: 70%;
+    margin-right: 0%;
+  }
+  .faq-search button,
+  button {
+    width: 25%;
+  }
 
-  .ban{
+  .ban {
     margin-top: 130px;
     margin-bottom: -80px;
   }
 
-    .help{
-      height: 300px;
-      width: auto !important;
-    }
+  .help {
+    height: 300px;
+    width: auto !important;
+  }
 
-    .login .centered-above{
-      width: 80%
-    }
+  .login .centered-above {
+    width: 80%;
+  }
 
-    .ko{
-      width: 250px;
-      height: 15px;
-
-    }
+  .ko {
+    width: 250px;
+    height: 15px;
+  }
 }
 
 @media (max-width: 575.98px) {
-  .mio{
+  .mio {
     margin-top: 100px;
   }
 
-  .log{
+  .log {
     margin-top: 60px;
     width: 300px;
     height: 18px;
-
   }
 
-  .ban{
-
+  .ban {
     margin-bottom: 40px;
   }
-  .ip{
-  display: none;
-  }
-  .ko{
-  
-    width: 190px;
-    height: 15px;
-
-  }
-
-
-
-}
-
-
-@media (max-width: 330px){
-
-  .md-hide{
+  .ip {
     display: none;
   }
-  .register-mail input[type=text]{
-  width: 100%;
-  margin-bottom: 0px;
+  .ko {
+    width: 190px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 330px) {
+  .md-hide {
+    display: none;
+  }
+  .register-mail input[type="text"] {
+    width: 100%;
+    margin-bottom: 0px;
   }
 
-  .register-mail button{
+  .register-mail button {
     width: 100%;
   }
-
-
 }
 
-.login-logo{
-  position:absolute;
+.login-logo {
+  position: absolute;
   bottom: 300px;
- left:0;
-  right:0;
-  margin:0 auto
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
-@media (max-width: 1200px){
-
+@media (max-width: 1200px) {
   .container {
-
-  display: block;
-
-  
-
-
+    display: block;
   }
-
-
-
-
-  }
+}
