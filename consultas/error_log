@@ -1,0 +1,1 @@
+[18-Feb-2020 13:56:01 America/Caracas] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/tecnofep/public_html/tuautoweb.com/consultas/consultaBuscador.php on line 27

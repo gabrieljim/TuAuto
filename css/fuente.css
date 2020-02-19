@@ -1,0 +1,138 @@
+@font-face{
+
+font-family: 'Estandar';
+
+    src: url('../tipografias/Louis_George_Cafe.ttf');
+
+    src: local('Estandar'), local('Estandar'), url('../tipografias/Louis_George_Cafe.ttf') format('truetype');
+
+
+}
+
+.fuente {
+
+  font: 17px/17px 'Estandar', Arial, sans-serif;
+
+  color:#000;
+
+}
+
+
+@font-face{
+
+font-family: 'bold';
+
+    src: url('../tipografias/Louis_George_Cafe.ttf');
+
+    src: local('bold'), local('bold'), url('../tipografias/Louis_George_Cafe_Bold.ttf') format('truetype');
+
+
+}
+
+.fuentebold {
+
+  font: 17px/17px 'bold', Arial, sans-serif;
+
+  color:#000;
+
+  
+
+}
+
+@font-face{
+
+font-family: 'bold';
+
+    src: url('../tipografias/Louis_George_Cafe.ttf');
+
+    src: local('bold'), local('bold'), url('../tipografias/Louis_George_Cafe_Bold.ttf') format('truetype');
+
+
+}
+
+.fuentebold2 {
+
+  font: 57px/57px 'bold', Arial, sans-serif;
+
+  color:#000;
+
+}  
+
+@font-face {
+
+font-family: 'bold';
+
+    src: url('../tipografias/Louis_George_Cafe.ttf');
+
+    src: local('bold'), local('bold'), url('../tipografias/Louis_George_Cafe_Bold.ttf') format('truetype');
+
+
+}
+
+.fuentebold3 {
+
+  font: 37px/37px 'bold', Arial, sans-serif;
+
+  color:#000;
+
+  
+
+}
+
+@font-face{
+
+font-family: 'bold';
+
+    src: url('../tipografias/Louis_George_Cafe.ttf');
+
+    src: local('bold'), local('bold'), url('../tipografias/Louis_George_Cafe_Bold.ttf') format('truetype');
+
+
+}
+
+.fuenteblanco {
+
+  font: 17px/17px 'bold', Arial, sans-serif;
+
+  color:#fff;
+
+}
+
+@font-face{
+
+font-family: 'bold';
+
+    src: url('../tipografias/Louis_George_Cafe.ttf');
+
+    src: local('bold'), local('bold'), url('../tipografias/Louis_George_Cafe_Bold.ttf') format('truetype');
+
+
+}
+
+.fuenteblancoslider {
+
+  font: 70px/70px 'bold', Arial, sans-serif;
+
+  color:#fff;
+
+}
+
+
+@font-face{
+
+font-family: 'bold';
+
+    src: url('../tipografias/Louis_George_Cafe.ttf');
+
+    src: local('bold'), local('bold'), url('../tipografias/Louis_George_Cafe.ttf') format('truetype');
+
+
+}
+
+.fuenteblancoslider2 {
+
+  font: 24px/24px 'bold', Arial, sans-serif;
+
+  color:#fff;
+
+}
