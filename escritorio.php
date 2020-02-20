@@ -183,7 +183,7 @@ include("escritorio/publicaciones.php");
                 <div id="page-inner" style="margin:0; min-height:0">
                     <div id="rellenar-datos">
                         <div id="usuario-empresa">
-                            <h1>¿Que tipo de usuario eres?</h1>
+                            <h1>¿Qué tipo de usuario eres?</h1>
                             <div class="tarjetas">
                                 <div class="tarjeta" data-tipo="usuario">
                                     <span class='fa fa-user'></span>
@@ -210,7 +210,7 @@ include("escritorio/publicaciones.php");
 
                             <header class="section-header" style="padding-top: 5px;">
                                 <h2 class="text-center" style="color: #fff;font-size: 18px;"><?php echo $row_user['correo'] ?></h2>
-                                <p class="text-center" style="color: #fff;"><?php echo $row_user['tipo'] ?></p>
+                                <p class="text-center" style="color: #fff;"><?php echo $_SESSION['tipo_cliente'] ?></p>
                             </header>
 
 
@@ -230,7 +230,7 @@ include("escritorio/publicaciones.php");
             <!-- /. NAV SIDE  -->
             <div id="page-wrapper">
 
-                <?php if ($row_user['tipo'] == 'Administrador') { ?>
+                <?php if ($row_user['tipo_cliente'] == '1') { ?>
                     <div id="banner"><img src="<?php echo $row_user['foto_banner'] ?>" alt=""></div>
                 <?php } ?>
                 <div id="page-inner">

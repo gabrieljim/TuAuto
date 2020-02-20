@@ -168,6 +168,5 @@ if (!file_exists($dir_subida)) {
 $sql= "INSERT INTO `vehiculo` (`cod_vehiculo`, `usuario`, `cod_marca`, `cod_modelo`, `cod_combustible`, `cod_puertas`, `cod_ano`, `cod_tipo`, `cod_color`, `cod_transmision`, `cod_tipov`, `cod_pais`, `cod_estado`, `cod_provincia`, `cod_dir`, `km`, `precio`, `descripcion`, `imagen1`, `imagen2`, `imagen3`, `imagen4`, `imagen5`, `activo`, `premiun`, `financiamiento`, `negociable`) VALUES (null,'$usuario', '$marca', '$modelo', '$combust', '$puertas', '$ano', '$condic', '$color', '$transm', '$tipovehi', '$pais', '$estado', 1, '$tipodirec', '$km', '$precio', '$descrip', '$imagen1', '$imagen2', '$imagen3', '$imagen4', '$imagen5', '$activo', 1, '$finan', '$negociable')";
 mysqli_query($conex,$sql) or die (mysqli_error($conex));
 
-header('Location: /tuautoweb.com/escritorio.php');
+header('Location: /escritorio.php');
 mysqli_close($conex);
-?>
