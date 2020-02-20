@@ -105,7 +105,7 @@ echo "<h4><strong>Notas del Vendedor</strong></h4>\n";
 
 echo " ";
 
-echo "<h5>" . $row_ve['observaciones'] . "</h5>\n";
+echo "<h5>" . $row_ve['descripcion'] . "</h5>\n";
 
 echo "<h4><strong>Informaci&oacuten B&aacutesica</strong></h4>\n";
 

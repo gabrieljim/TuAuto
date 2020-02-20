@@ -761,7 +761,7 @@ include("consultas/consultasGenerales.php");
                             </div>
                         </div>
                         <label>Descripción</label>
-                        <input type="text" class="form-control" name="observaciones" placeholder="Coloque sus observaciones" id="observaciones"></input>
+                        <input type="text" class="form-control" name="descripcion" placeholder="Coloque su descripcion" id="descripcion"></input>
                         <p>Fotos</p>
                         <input required multiple name="photosCar[]" type="file">
                     </div>
