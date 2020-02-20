@@ -249,32 +249,23 @@ include("escritorio/publicaciones.php");
                                             } ?>
                                             <td>
 
-                                                <div class="card" style="display: inline-block; cursor:pointer; width: 41rem; border: solid 2px; margin-left: 5px; border-radius:5px;">
-                                                    <img class="card-img-top" alt="Card image cap" style="height: 250px; width: 406px;" src="<?php echo $row2['imagen1']; ?>">
+                                                <div class="card" style="padding: 7px; display: inline-block; cursor:pointer; width: 243px; border: solid 0.7px #ddd; margin-left: 5px; border-radius:5px;">
+                                                    <img class="card-img-top" alt="Card image cap" style="height: 150px; width: 225px; border-radius:5px;" src="<?php echo $row2['imagen1']; ?>">
                                                     <div class="card-header">
                                                         <h3 class="card-title">
-                                                            <p class="text-center" style="font-size: 20px; margin-bottom: 25px;"><strong><?php echo number_format($row2['precio'], 0, ".", "."); ?>
+                                                            <p style="font-size: 20px; margin-bottom: 25px;"><strong><?php echo number_format($row2['precio'], 0, ".", "."); ?>
                                                                     USD</strong></p>
                                                         </h3>
                                                     </div>
 
-                                                    <ul class="list-group list-group-flush" style="width: 39rem; padding-left: 10px;">
-                                                        <li class="list-group-item" style="height: 5rem; ">
-                                                            <p class="card-text" style="padding-top: 3px;">
-                                                                Año: <?php echo $row2['ano']; ?></p>
-                                                        </li>
-                                                        <li class="list-group-item" style="height: 5rem; ">
-                                                            <p class="card-text" style="padding-top: 3px;">
-                                                                KM: <?php echo number_format($row2['km'], 0, ".", ".") ?></p>
-                                                        </li>
-                                                        <li class="list-group-item" style="height: 5rem; ">
-                                                            <p class="card-text" style="padding-top: 3px;">
-                                                                Marca: <?php echo $row2['marca']; ?></p>
-                                                        </li>
-                                                        <li class="list-group-item" style="height: 5rem; ">
-                                                            <p class="card-text" style="padding-top: 3px;">
-                                                                Modelo: <?php echo $row2['modelo']; ?></p>
-                                                        </li>
+                                                    <ul style="width: 39rem; padding-left:0px">
+                                                        <p style="line-height: 0; padding:2px">
+                                                            <?php echo number_format($row2['km'], 0, ".", ".") ?>Km</p>
+
+
+                                                        <p style="line-height:0; padding-bottom:10px">
+                                                            <?= $row2['marca'] . " " . $row2['modelo']; ?>
+                                                        </p>
                                                     </ul>
                                                     <div class="text-center" style="margin-bottom: 10px;">
                                                         <button class="btn btn-primary center" onClick="mostrarVehi(<?php echo $row2['cod_vehiculo']; ?>), $('#miModaleditar').modal('show');">Editar</button>

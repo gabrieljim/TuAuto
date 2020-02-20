@@ -760,7 +760,7 @@ include("consultas/consultasGenerales.php");
                                 <input type="text" class="form-control" name="precio" placeholder="Coloque el precio" id="precio" aria-describedby="sizing-addon1" required>
                             </div>
                         </div>
-                        <label>Observaciones</label>
+                        <label>Descripción</label>
                         <input type="text" class="form-control" name="observaciones" placeholder="Coloque sus observaciones" id="observaciones"></input>
                         <p>Fotos</p>
                         <input required multiple name="photosCar[]" type="file">

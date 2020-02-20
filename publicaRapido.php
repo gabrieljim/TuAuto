@@ -10,7 +10,7 @@ try {
 
     //guardar los datos del usuario que se esta registrando
     $correo     = $_POST['correo'];
-    $contrasena = $_POST['contrasena'];
+    $contrasena = md5($_POST['contrasena']);
     $pais       = (int) $_SESSION['pais'];
     $direccion  = $_POST['direccion'];
     $telefono   = $_POST['nroTelefono'];
@@ -111,7 +111,7 @@ try {
 
 
     # Agregamos la imagen y los demas datos a la base de datos
-    $sql = "INSERT INTO `vehiculo` (`cod_vehiculo`, `usuario`, `cod_marca`, `cod_modelo`, `cod_combustible`, `cod_puertas`, `cod_ano`, `cod_tipo`, `cod_color`, `cod_transmision`, `cod_tipov`, `cod_pais`, `cod_estado`, `cod_provincia`, `cod_dir`, `matricula`, `observaciones`, `km`, `precio`, `descripcion`, `imagen1`, `imagen2`, `imagen3`, `imagen4`, `imagen5`, `activo`, `premiun`, `financiamiento`, `negociable`) VALUES (null,'$correo', '$marca', '$modelo', 1, 2, '$ano', 1, 1, 1, 1, '$pais', 1, 1, 1,'$matricula', '$km', '$precio', '', '$imagen1', '$imagen2', '$imagen3', '$imagen4', '$imagen5', 1, 1, 1, 1)";
+    $sql = "INSERT INTO `vehiculo` (`cod_vehiculo`, `usuario`, `cod_marca`, `cod_modelo`, `cod_combustible`, `cod_puertas`, `cod_ano`, `cod_tipo`, `cod_color`, `cod_transmision`, `cod_tipov`, `cod_pais`, `cod_estado`, `cod_provincia`, `cod_dir`, `matricula`, `observaciones`, `km`, `precio`, `descripcion`, `imagen1`, `imagen2`, `imagen3`, `imagen4`, `imagen5`, `activo`, `premiun`, `financiamiento`, `negociable`) VALUES (null,'$correo', '$marca', '$modelo', 1, 2, '$ano', 1, 1, 1, 1, '$pais', 1, 1, 1,'$matricula', '$observaciones', '$km', '$precio', '', '$imagen1', '$imagen2', '$imagen3', '$imagen4', '$imagen5', 1, 1, 1, 1)";
     $result1 = mysqli_query($conex, $sql) or die(mysqli_error($conex));
 } catch (Exception $e) {
     echo 'asdaskldj' . $e;
