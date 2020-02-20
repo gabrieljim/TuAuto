@@ -46,7 +46,7 @@ include("escritorio/publicaciones.php");
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
@@ -96,12 +96,10 @@ include("escritorio/publicaciones.php");
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
+                </li> -->
 
-                </li>
                 <!-- /.dropdown -->
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
@@ -158,10 +156,9 @@ include("escritorio/publicaciones.php");
                             </a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
+                </li> -->
                 <!-- /.dropdown -->
-                <li class="dropdown">
+                <!-- <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
@@ -171,8 +168,7 @@ include("escritorio/publicaciones.php");
                         <li><a href="usuario/close.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar Sesión</a>
                         </li>
                     </ul>
-                    <!-- /.dropdown-user -->
-                </li>
+                </li> -->
                 <!-- /.dropdown -->
             </ul>
         </nav>
