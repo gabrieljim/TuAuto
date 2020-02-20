@@ -20,6 +20,7 @@ $username_conex = "root";
 
 $password_conex = "";
 
+// zS1757Zsbj
 
 $conex = mysqli_connect($hostname_conex, $username_conex, $password_conex, $database_conex) or trigger_error(mysqli_error(),E_USER_ERROR); 
 
