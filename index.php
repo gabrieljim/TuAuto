@@ -183,7 +183,7 @@ include("consultas/consultasGenerales.php");
             <ul class="navbar-nav mr-auto w-100 align-content-center">
                 <li class="nav-item">
                     <?php if (isset($_SESSION['usuario'])) { ?>
-                        <a class="nav-link fuentebold" style="color: #000; padding-top: 16px;" href="/tuautoweb.com/publicar.php"><strong> PUBLICA</strong></a>
+                        <a class="nav-link fuentebold" style="color: #000; padding-top: 16px;" href="/publicar.php"><strong> PUBLICA</strong></a>
                     <?php } else { ?>
 
                         <a class="nav-link fuentebold" style="color: #000; padding-top: 16px;" href="#" onclick="ShowTab('publicar')" data-toggle="tab"><strong> PUBLICA</strong></a>
@@ -430,6 +430,7 @@ include("consultas/consultasGenerales.php");
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+
             <div class="filter-bar my-3 text-left" style="margin-top:-100px;">
                 <div class="mx-5 padre radio centered px-5 container" style="width: 1430px; padding-top: 10px; margin-top:-200px; background-color:rgb(255,255,0); border-radius: 5px;">
                     <h5 class="fuente" style="color:black; font:'bold', Arial, sans-serif">BÚSQUEDA AVANZADA</h5>
@@ -529,7 +530,7 @@ include("consultas/consultasGenerales.php");
                                     <div class="card-header fuentebold">VENDE</div>
                                     <div class="card-body">
                                         <?php if (isset($_SESSION['usuario'])) { ?>
-                                            <a class="opcioncontra" href="/tuautoweb.com/publicar.php">
+                                            <a class="opcioncontra" href="/publicar.php">
                                                 <img class="mb-5 publ cent" src="iconos/iconosjk-03.png">
                                             </a>
                                         <?php } else { ?>
@@ -742,15 +743,15 @@ include("consultas/consultasGenerales.php");
                         <p>Modelo</p>
                         <select required name="modelo" class="form-control mb-3" id="mod">
                         </select>
-
-                        <div class="d-flex flex-row">
-                            <label for="ano" class="mr-4">Año <select required id="ano" name="ano" class="form-control mb-3">
-                                    <?php include("escritorio/ano.php"); ?>
-                                </select></label>
-
-                            <label for="mtr" class="ml-4">Matricula </label>
-                            <input type="text" class="form-control" name="mtr" placeholder="Coloque la Matricula" id="mtr" aria-describedby="sizing-addon1" required>
-
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="ano">Año </label>
+                                <select required id="ano" name="ano" class="form-control mb-3"> <?php include("escritorio/ano.php"); ?> </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="mtr">Matricula </label>
+                                <input type="text" class="form-control" name="mtr" placeholder="Coloque la Matricula" id="mtr" aria-describedby="sizing-addon1" required>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -766,10 +767,9 @@ include("consultas/consultasGenerales.php");
                         <input type="text" class="form-control" name="descripcion" placeholder="Coloque su descripcion" id="descripcion"></input>
                         <p>Fotos</p>
                         <input required multiple name="photosCar[]" type="file">
+                        <br>
+                        <input type="submit" class="btn btn-primary btn-lg btn-block mt-5" style="color: #000; background-color: #feee2c; height: 70px; display: block; border: 1px; padding-top:5px" value="PUBLICAR">
                     </div>
-                    <br>
-                    <input type="submit" class="btn btn-primary btn-lg btn-block mt-5" style="color: #000; background-color: #feee2c; height: 70px; display: block; border: 1px; padding-top:5px" value="PUBLICAR">
-                </div>
             </form>
         </div>
         <!--    TERMINA LA SECCION DE PUBLICAR RAPIDO -->

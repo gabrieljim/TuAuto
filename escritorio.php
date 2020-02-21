@@ -206,7 +206,7 @@ include("escritorio/publicaciones.php");
 
                             <header class="section-header" style="padding-top: 5px;">
                                 <h2 class="text-center" style="color: #fff;font-size: 18px;"><?php echo $row_user['correo'] ?></h2>
-                                <p class="text-center" style="color: #fff;"><?php echo $_SESSION['tipo_cliente'] ?></p>
+                                <p class="text-center" style="color: #fff;"><?php echo $row_user['tipo_cliente'] ? 'Empresa' : 'Usuario' ?></p>
                             </header>
 
 
