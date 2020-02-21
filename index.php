@@ -3,6 +3,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 
+$_SESSION['pais'] = 3;
 
 include("consultas/consultasGenerales.php");
 
@@ -168,7 +169,7 @@ include("consultas/consultasGenerales.php");
 
             ?>
 
-            <img onClick="location.href ='index.html';" src="<?php echo $ban; ?>" class="tuyo" style="cursor: pointer; 	width: 25px; height: 25px;">
+            <img src="<?php echo $ban; ?>" class="tuyo" style=" cursor:default; width: 25px; height: 25px;">
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

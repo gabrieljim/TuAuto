@@ -1,4 +1,4 @@
-<?php 
+<?php
 if (!isset($_SESSION)) {
   session_start();
 }
@@ -7,11 +7,8 @@ if (!isset($_SESSION)) {
 session_start();
 
 session_unset();
- 
+
 session_destroy();
 
 
-header('Location: ../index.html');
-
-
-?>
+header('Location: ../index.php');
