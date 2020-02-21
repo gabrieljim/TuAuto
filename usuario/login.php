@@ -41,7 +41,7 @@ if ($row = mysqli_fetch_array($resultado)) {
 
 			$_SESSION["usuario"] = $row["correo"];
 			$_SESSION["nivel"] = $row["tipo_usuario"];
-			$_SESSION["tipo_cliente"] = $row["tipo_cliente"] ? 'Empresa' : 'Usuario';
+			$_SESSION["tipo_cliente"] = $row["tipo_cliente"] ? 	 : 'Usuario';
 			$_SESSION["imagen"] = $row["foto"];
 			$_SESSION["rellenado"] = $row["rellenado"];
 

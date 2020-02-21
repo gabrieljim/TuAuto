@@ -696,3 +696,54 @@ p img {
     display: block;
   }
 }
+
+#boton-busqueda {
+  border-left: transparent;
+  background-color: transparent;
+  transition: all 0.2s;
+  padding: 0px;
+}
+
+.select-container select {
+  background: transparent;
+  background-color: transparent;
+  color: #696969;
+  border: none;
+  text-align: center;
+  border: 1px solid transparent;
+  border-bottom: 1.7px solid #696969;
+  padding: 4px;
+  -webkit-appearance: none;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.select-container select:focus,
+#boton-busqueda:focus {
+  background-color: lightgray;
+  border-radius: 5px;
+  color: black;
+}
+
+.select-container select:hover,
+#boton-busqueda:hover {
+  background: transparent;
+  background-color: #ddd;
+  box-shadow: 0 0px 2px #000;
+  border-bottom: transparent;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.vertical-line {
+  height: 44px;
+  border: 1px solid gray;
+  width: 1px;
+  background-color: #000;
+  margin-right: 10px;
+}
+
+.filters {
+  padding: 5px;
+}

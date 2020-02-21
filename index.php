@@ -430,12 +430,11 @@ include("consultas/consultasGenerales.php");
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
             <div class="filter-bar my-3 text-left" style="margin-top:-100px;">
-                <div class="mx-5 padre radio centered px-5 container" style="width: 1430px; padding-top: 10px; margin-top:-200px;">
-                    <h5 class="fuente">Búsqueda avanzada</h5>
+                <div class="mx-5 padre radio centered px-5 container" style="width: 1430px; padding-top: 10px; margin-top:-200px; background-color:rgb(255,255,0); border-radius: 5px;">
+                    <h5 class="fuente" style="color:black; font:'bold', Arial, sans-serif">BÚSQUEDA AVANZADA</h5>
                     <div class="filters dark-border">
-                        <div class="d-flex text-white align-self-center">
+                        <div class="select-container d-flex text-white align-self-center">
 
                             <div class="flex-fill p-2 fuente">
                                 <select name="ubi" id="ubi" class="fuente">
@@ -463,14 +462,16 @@ include("consultas/consultasGenerales.php");
                                 <?php include "consultas/transSearch.php" ?>
                             </div>
 
-                            <button class="px-3 hij dark-border fuentebold" onclick="ShowTab('publish'), busqueda(); return false;">Buscar
+                            <div class="vertical-line "></div>
+
+                            <button id="boton-busqueda" class="hij dark-border fuentebold" onclick="ShowTab('publish'), busqueda(); return false;">BUSCAR
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container text-center col-md-4 col-sm-6 col-md-8 " style="width: 100%; display: inline; margin-top: -50px;">
+            <div class="container text-center col-md-4 col-sm-6 col-md-8 " style=" display: inline; ">
                 <div class="logos goha" style="padding-top: 60px;width: 100%; margin-top: 0px;">
                     <div class="slide"><img style="cursor: pointer" onclick="ShowTab('publish'), MostrarConsulta('consultas/consultaM.php?m=50'); return false" src="marcas/over/marcas_over-01.png"></div>
                     <div class="slide"><img style="cursor: pointer" onclick="ShowTab('publish'), MostrarConsulta('consultas/consultaM.php?m=6'); return false" src="marcas/over/marcas_over-02.png"></div>
