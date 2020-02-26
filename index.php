@@ -770,6 +770,7 @@ include("consultas/consultasGenerales.php");
                         <br>
                         <input type="submit" class="btn btn-primary btn-lg btn-block mt-5" style="color: #000; background-color: #feee2c; height: 70px; display: block; border: 1px; padding-top:5px" value="PUBLICAR">
                     </div>
+                </div>
             </form>
         </div>
         <!--    TERMINA LA SECCION DE PUBLICAR RAPIDO -->
