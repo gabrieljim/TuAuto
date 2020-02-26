@@ -274,9 +274,10 @@ include("usuario/consultas_generales.php");
                                         <p class="text-center" id="timagen" onClick="foto()" href="#" style="cursor: pointer;">Cambiar Foto</p>
 
 
-                                        <header class="section-header" style="padding-top: 10px;">
-                                            <h2 class="text-center"><?php echo $row_user['correo'] ?></h2>
-                                            <p class="text-center"><?php echo $row_user['tipo'] ?></p>
+                                        <header class="section-header text-center" style="padding-top: 10px;">
+                                            <h2><?php echo $row_user['correo'] ?></h2>
+                                            <p><?php echo $row_user['tipo_cliente'] ? 'Empresa' : 'Usuario' ?></p>
+                                            <button data-user="<?= $row_user['correo'] ?>" id='change-user-type' class="btn btn-primary">Cambiar tipo de usuario</button>
                                         </header>
 
 
@@ -401,6 +402,8 @@ include("usuario/consultas_generales.php");
             <script src="assets/js/morris/morris.js"></script>
             <!-- Custom Js -->
             <script src="assets/js/custom-scripts.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+            <script src="assets/js/jsUsuario.js"></script>
 
 
 </body>

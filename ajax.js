@@ -1,47 +1,46 @@
-//Desarrollado por Jesus Liñán
+//Desarrollado por Jesus Liï¿½ï¿½n
 //ribosomatic.com
-//Puedes hacer lo que quieras con el código
+//Puedes hacer lo que quieras con el cï¿½digo
 //pero visita la web cuando te acuerdes
 
-function objetoAjax(){
-	var xmlhttp=false;
-	try {
-		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-	} catch (e) {
-		try {
-		   xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-		} catch (E) {
-			xmlhttp = false;
-  		}
-	}
+function objetoAjax() {
+  var xmlhttp = false;
+  try {
+    xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+    try {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (E) {
+      xmlhttp = false;
+    }
+  }
 
-	if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-		xmlhttp = new XMLHttpRequest();
-	}
-	return xmlhttp;
+  if (!xmlhttp && typeof XMLHttpRequest != "undefined") {
+    xmlhttp = new XMLHttpRequest();
+  }
+  return xmlhttp;
 }
 
-function MostrarConsulta(datos){
-	divResultado = document.getElementById('resultado');
-	ajax=objetoAjax();
-	ajax.open("GET", datos);
-	ajax.onreadystatechange=function() {
-		if (ajax.readyState==4) {
-			divResultado.innerHTML = ajax.responseText
-		}
-	}
-	ajax.send(null)
+function MostrarConsulta(datos) {
+  divResultado = document.getElementById("resultado");
+  ajax = objetoAjax();
+  ajax.open("GET", datos);
+  ajax.onreadystatechange = function() {
+    if (ajax.readyState == 4) {
+      divResultado.innerHTML = ajax.responseText;
+    }
+  };
+  ajax.send(null);
 }
 
-
-function MostrarConsulta2(datos){
-	divResultado = document.getElementById('resul2');
-	ajax=objetoAjax();
-	ajax.open("GET", datos);
-	ajax.onreadystatechange=function() {
-		if (ajax.readyState==4) {
-			divResultado.innerHTML = ajax.responseText
-		}
-	}
-	ajax.send(null)
+function MostrarConsulta2(datos) {
+  divResultado = document.getElementById("resul2");
+  ajax = objetoAjax();
+  ajax.open("GET", datos);
+  ajax.onreadystatechange = function() {
+    if (ajax.readyState == 4) {
+      divResultado.innerHTML = ajax.responseText;
+    }
+  };
+  ajax.send(null);
 }

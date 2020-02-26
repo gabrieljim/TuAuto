@@ -49,6 +49,9 @@ switch ($selected) {
         <a href="usuario.php" class=<?= $usuario ?>><i class="fa fa-user" style="font-size: 30px;"></i>Usuario</a>
     </li>
     <li>
+        <a href="publicar.php" class=<?= $publicar ?>><i class="fa fa-bar-chart-o"></i>Publicar</a>
+    </li>
+    <li>
         <a href="#">
             <i class="fa fa-phone" style="font-size: 30px;"></i>Contacto
         </a>
