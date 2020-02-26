@@ -535,6 +535,19 @@ line-height: 1.428571429;
     box-shadow: 0 0 5px #ddd;
 }
 
+.gallery {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.gallery img {
+    width: 100%;
+    box-shadow: 0 0 2px black;
+}
+
 /*----------------------------------------------
     MEDIA QUERIES     
 ------------------------------------------------*/
