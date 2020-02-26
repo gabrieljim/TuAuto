@@ -14,7 +14,7 @@ body {
 
  #wrapper {
     width: 100%;
-    background:#000;
+    background:#ccc;
 }
 
 #page-wrapper {
@@ -28,7 +28,7 @@ body {
 }
 #page-inner {
     width:100%;
-    margin:10px 20px 10px 0px;
+    margin:0px 20px 10px 0px;
     background-color:transparent;
     padding:10px;
     min-height:1200px;
@@ -309,8 +309,8 @@ line-height: 21px;
 padding-top: 4px;
 }
 .active-menu {
-    background-color:#2d2d2d!important;
-    color: #2d2d2d;
+    background-color:#6666663b !important;
+    color: #666;
 }
 
 .arrow {
@@ -546,6 +546,18 @@ line-height: 1.428571429;
 .gallery img {
     width: 100%;
     box-shadow: 0 0 2px black;
+}
+
+#main-menu li {
+    color: black;
+}
+
+#main-menu li:hover {
+    background-color: #6666663b;
+}
+
+.sidebar-collapse .nav > li > a {
+    color: black
 }
 
 /*----------------------------------------------

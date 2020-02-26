@@ -174,31 +174,11 @@ include("usuario/consultas_generales.php");
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-
-                    <div class="navbar"><img src="<?php echo $row_user['foto'] ?>" style="display: block; width:100px; height: 100px; border-radius: 100%; margin-top: 35px;margin-right: auto; margin-left: auto;">
-
-                        <header class="section-header" style="padding-top: 5px;">
-                            <h2 class="text-center" style="color: #fff; font-size: 18px;"><?php echo $row_user['correo'] ?></h2>
-                            <p class="text-center" style="color: #fff;"><?php echo $row_user['tipo'] ?></p>
-                        </header>
-
-
-                    </div>
-                    <li>
-                        <a href="escritorio.php"><i class="fa fa-dashboard"></i>Escritorio</a>
-                    </li>
-                    <li>
-                        <a href="usuario.php"><i class="fa fa-user" style="font-size: 30px;"></i>Usuario</a>
-                    </li>
-                    <li>
-                        <a href="publicar.php" class="active-menu"><i class="fa fa-bar-chart-o"></i>Publicar</a>
-                    </li>
-
-
+                    <?php $selected = 'publicar';
+                    include('sidebar.php')
+                    ?>
                 </ul>
-
             </div>
-
         </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
