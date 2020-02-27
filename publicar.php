@@ -16,6 +16,7 @@ include("usuario/consultas_generales.php");
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FontAwesome Styles-->
     <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- Morris Chart Styles-->
     <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
     <!-- Custom Styles-->
@@ -39,134 +40,6 @@ include("usuario/consultas_generales.php");
                 </button>
                 <img class="navbar-brand" style="width: 350px; cursor: pointer" src="imagenes/logo_sm.png" onClick="window.location='index.php';"><a class="navbar-brand" href="index.html"></a>
             </div>
-
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Doe</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Today</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li>
-                            <a href="usuario/close.php" style="color: #000;"><i class="fa fa-sign-out fa-fw"></i>Cerrar Sesión</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
         </nav>
 
 
@@ -206,7 +79,7 @@ include("usuario/consultas_generales.php");
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <form enctype="multipart/form-data" role="form" action="guardar.php" method="POST">
+                                    <form id="forma-publicar" enctype="multipart/form-data" role="form" action="guardar.php" method="POST">
                                         <div class="col-lg-6">
                                             <div class="form-group" style="font-size: 18px;">
                                                 <label>Marca</label>
@@ -368,7 +241,7 @@ include("usuario/consultas_generales.php");
                                             <!--                                            <p class="text-center"></p>-->
                                             <!--                                        </header>-->
 
-                                            <input type="submit" class="btn btn-primary btn-lg btn-block" style="color: #000; background-color: #feee2c; height: 70px;  display: block; border: none;">
+                                            <input id="boton-enviar-forma" type="submit" class="btn btn-primary btn-lg btn-block" value="Enviar" style="color: #000; background-color: #feee2c; height: 70px;  display: block; border: none;">
 
                                             <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#miModalpublicacion" style="color: #fff; background-color: #000; margin-top: 20px; height: 70px;  display: block; border: none;">
                                                 Cancelar Publicación
@@ -425,7 +298,123 @@ include("usuario/consultas_generales.php");
         </div>
     </div>
 
+    <style>
+        .botones-modal {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 2px #ddd;
+            font-size: 20px;
+            transition: all 0.2s;
+            background-color: white;
+            user-select: none;
+            width: 100%;
 
+        }
+
+        .boton-confirmar {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 2px #ddd;
+            font-size: 20px;
+            transition: all 0.2s;
+            background-color: white;
+            user-select: none;
+            margin: auto;
+        }
+
+        .boton-confirmar:hover {
+            background-color: #f0f0f059
+        }
+
+        .select-publication {
+            padding: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            text-align: center;
+            flex: 3;
+            transition: all 0.2s;
+        }
+
+        .button-container * {
+            pointer-events: none;
+        }
+
+        .button-container:hover {
+            cursor: pointer;
+        }
+
+        .button-container:hover .botones-modal {
+            background-color: #f0f0f059;
+        }
+
+        .activo-mano .botones-modal {
+            background-color: #f0f0f059 !important;
+            border: 1px solid gold;
+            box-shadow: 0 0 4px gold;
+            color: gold;
+        }
+
+        .modal-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .cuerpo {
+            width: 50%;
+            margin: auto;
+        }
+
+        .select-publication .fa {
+            font-size: 40px;
+        }
+    </style>
+
+    <!-- modal para tipo de publicacion -->
+    <div id="modal-tipo" class="modal fade">
+        <div class="cuerpo">
+            <div class="modal-content">
+
+                <h1 class="modal-title">Tipo de Publicación</h1>
+
+                <div class="select-publication">
+                    <div class="button-container" data-publication-id="0">
+                        <div class="botones-modal">
+                            <i class="fa fa-bicycle"></i>
+                            <p>Gratuita</p>
+                        </div>
+                    </div>
+                    <div class="button-container" data-publication-id="1">
+                        <div class="botones-modal">
+                            <i class="fa fa-car"></i>
+                            <p>Gold</p>
+                        </div>
+                    </div>
+                    <div class="button-container" data-publication-id="2">
+                        <div class="botones-modal">
+                            <i class="fa fa-truck"></i>
+                            <p>Premium</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="boton-confirmar" id="button-confirm">Confirmar</button>
+            </div>
+        </div>
+    </div>
     <!-- /. ROW  -->
     <footer>
         <p><a href="http://webthemez.com"></a></p>
@@ -448,7 +437,8 @@ include("usuario/consultas_generales.php");
     <script src="assets/js/morris/morris.js"></script>
     <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
-
+    <!-- modal-tipo -->
+    <script src="modal-tipo.js"></script>
 
 </body>
 
