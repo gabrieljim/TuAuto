@@ -88,7 +88,6 @@ include("escritorio/publicaciones.php");
                 <div id="page-inner">
                     <div class="row">
                         <div class="col-md-12">
-
                             <h2 class="text-center">Mis Publicaciones</h2>
                             <div class="row" style="margin-top: 30px;">
                                 <div class="col-md-3 col-sm-12 col-xs-12">

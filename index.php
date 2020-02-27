@@ -701,8 +701,7 @@ include("consultas/consultasGenerales.php");
                             </div>
                         </div>
                     </div>
-
-                </div>
+                 </div>
             </div>
         </div>
         <div id="publish" class="tab-pane fade-in container show-top-margin separate-rows tall-rows">
