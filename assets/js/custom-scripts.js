@@ -226,9 +226,11 @@
 
 // Multiple images preview in browser
 let imagesPreview = function(input, placeToInsertImagePreview) {
+  let totalfiles = document.getElementById("gallery-photo-add").files.length;
+
   $(placeToInsertImagePreview).html("");
   if (input.files) {
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < totalfiles; i++) {
       let reader = new FileReader();
 
       reader.onload = function(event) {
