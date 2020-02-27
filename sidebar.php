@@ -52,16 +52,24 @@ switch ($selected) {
         <a href="publicar.php" class=<?= $publicar ?>><i class="fa fa-bar-chart-o"></i>Publicar</a>
     </li>
     <li>
-        <a href="#">
-            <i class="fa fa-phone" style="font-size: 30px;"></i>Contacto
-        </a>
-    </li>
-    <li>
         <a href="#"><i class="fa fa-gear"></i>Servicios</a>
     </li>
     <li>
         <a href="#"><i class="fa fa-map-marker"></i> Ubicación</a>
     </li>
     <li> <a href="usuario/close.php"><i class="fa fa-sign-out"></i>Cerrar Sesión</a>
+    </li>
+
+    <li id='contact-info' style="display:flex; flex-direction:row; justify-content: flex-start; padding-left: 10px;">
+        <div>
+            <p>Local:</p>
+            <p>Telefono 1:</p>
+            <p>Telefono 2:</p>
+        </div>
+        <div style='padding-left:20px'>
+            <p><?= $row_user['local'] ?></p>
+            <p><?= $row_user['telefono1'] ?></p>
+            <p><?= $row_user['telefono2'] ?></p>
+        </div>
     </li>
 <?php endif ?>

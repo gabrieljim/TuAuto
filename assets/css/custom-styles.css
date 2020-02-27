@@ -564,6 +564,16 @@ line-height: 1.428571429;
     font-size: 1.6rem !important;
   }
 
+  #contact-info {
+      padding: 14px 0;
+  }
+
+  #contact-info p {
+    margin: 0;
+    font-weight: bold;
+    padding:0;
+  }
+
 /*----------------------------------------------
     MEDIA QUERIES     
 ------------------------------------------------*/
