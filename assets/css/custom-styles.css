@@ -564,15 +564,35 @@ line-height: 1.428571429;
     font-size: 1.6rem !important;
   }
 
-  #contact-info {
-      padding: 14px 0;
-  }
+#contact:hover {
+    cursor: pointer;
+}
 
-  #contact-info p {
+#contact-info {
+    overflow:hidden;
+    display:flex; 
+    flex-direction:row; 
+    justify-content: flex-start; 
+    padding-left: 10px;
+    box-sizing: border-box;
+    max-height: 0;
+    transition: max-height 0.2s;
+    }
+
+#contact-info.showing {
+    padding: 14px;
+    max-height: 100px;
+}
+
+#contact-info p {
     margin: 0;
     font-weight: bold;
     padding:0;
-  }
+}
+
+#contact * {
+    pointer-events: none;
+}
 
 /*----------------------------------------------
     MEDIA QUERIES     

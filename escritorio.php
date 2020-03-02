@@ -225,7 +225,6 @@ include("escritorio/publicaciones.php");
     <!-- Custom Js -->
     <script src="assets/js/custom-scripts.js"></script>
 
-
 </body>
 
 </html>

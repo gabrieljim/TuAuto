@@ -432,7 +432,7 @@ include("consultas/consultasGenerales.php");
             </div>
 
             <div class="filter-bar my-3 text-left" style="margin-top:-100px;">
-                <div class="mx-5 padre radio centered px-5 container" style="width: 1430px; padding-top: 10px; margin-top:-200px; background-color:rgb(255,255,0); border-radius: 5px;">
+                <div class="mx-5 padre radio centered px-5 container" style="width: 1430px; padding-top: 10px; margin-top:-200px; background-color:#ffef20; border-radius: 5px;">
                     <h5 class="fuente" style="color:black; font:'bold', Arial, sans-serif">BÚSQUEDA AVANZADA</h5>
                     <div class="filters dark-border">
                         <div class="select-container d-flex text-white align-self-center">

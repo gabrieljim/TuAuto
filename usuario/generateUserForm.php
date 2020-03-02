@@ -50,6 +50,12 @@ if ($tipo === 'usuario') {
             </div>
         </div>
         <div class="row">
+            <div class="form-group col-sm-12">
+                <label for="nombrefantasia">Nombre Fantasía</label>
+                <input required type="text" class="form-control" name="nombrefantasia" id="nombrefantasia">
+            </div>
+        </div>  
+        <div class="row">
             <div class="form-group col-sm-4">
                 <label for="local">Teléfono Local</label>
                 <input required type="text" class="form-control" name="local" id="local">

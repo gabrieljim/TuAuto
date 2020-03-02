@@ -275,7 +275,7 @@ include("usuario/consultas_generales.php");
 
 
                                         <header class="section-header text-center" style="padding-top: 10px;">
-                                            <h2><?php echo $row_user['correo'] ?></h2>
+                                            <h2><?= $row_user['tipo_cliente'] ? $row_user['nombre_fantasia'] : $row_user['nombre'] ?></h2>
                                             <p><?php echo $row_user['tipo_cliente'] ? 'Empresa' : 'Usuario' ?></p>
                                             <button data-user="<?= $row_user['correo'] ?>" id='change-user-type' class="btn btn-primary">Cambiar tipo de usuario</button>
                                         </header>

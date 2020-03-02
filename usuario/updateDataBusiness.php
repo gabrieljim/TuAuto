@@ -14,6 +14,7 @@ $query = "UPDATE usuario SET
         telefono1='$telefono1', 
         telefono2='$telefono2', 
         direccion='$address', 
+        nombre_fantasia='$nombrefantasia',
         rellenado=1, 
         tipo_cliente=1 
     WHERE correo='$correo'";
