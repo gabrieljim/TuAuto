@@ -197,71 +197,82 @@ include("usuario/consultas_generales.php");
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <form role="form" name="actualizar" id="actualizar" action="usuario/actualizar.php" method="post">
-                                            <div class="form-group" style="font-size: 18px;">
-                                                <label>Nombres</label>
-                                                <input class="form-control" type="text" name="nombre" id="nombre" value="<?php echo $row_user['nombre']; ?>">
 
-                                            </div>
+                                            <?php if (!$row_user['tipo_cliente']) : ?>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Nombres</label>
+                                                    <input class="form-control" type="text" name="nombre" id="nombre" value="<?php echo $row_user['nombre']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Apellidos</label>
+                                                    <input class="form-control" type="text" id="apellido" name="apellido" value="<?php echo $row_user['apellido']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>E-mail</label>
+                                                    <input class="form-control" type="E-mail" id="correoElectronico" name="correo" readonly value="<?php echo $row_user['correo']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Teléfono 1</label>
+                                                    <input type="" class="form-control" type="E-mail" id="telefono1" name="telefono1" value="<?php echo $row_user['telefono1']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Teléfono 2</label>
+                                                    <input class="form-control" type="E-mail" id="telefono2" name="telefono2" value="<?php echo $row_user['telefono2']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Pais</label>
+                                                    <select class="form-control" name="pais" id="pais">
+                                                        <?php include "usuario/pais.php" ?>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label for="es">ESTADO</label>
+                                                    <?php include "usuario/consultas_generales.php" ?>
+                                                    <select class="form-control" id="es" name="es" onchange="showselect5(this.value)">
+                                                        <option value="<?php echo $row_user['cod_estado'] ?>" class="fuente"><?php echo $row_user['estado'] ?></option>
+                                                        <?php include "usuario/estados.php" ?>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Dirección</label>
+                                                    <input class="form-control" style="height: 80px;" type="text" id="direccion" name="direccion" value="<?php echo $row_user['direccion']; ?>">
+                                                </div>
+                                                <input type="hidden" name="cliente" value="usuario">
 
-                                            <div class="form-group" style="font-size: 18px;">
-                                                <label>Apellidos</label>
-                                                <input class="form-control" type="text" id="apellido" name="apellido" value="<?php echo $row_user['apellido']; ?>">
+                                            <?php else : ?>
 
-                                            </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Nombre</label>
+                                                    <input class="form-control" type="text" name="nombre" id="nombre" value="<?php echo $row_user['nombre']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Nombre Fantasía</label>
+                                                    <input class="form-control" type="text" name="nombrefantasia" id="nombrefantasia" value="<?php echo $row_user['nombre_fantasia']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>RUT</label>
+                                                    <input class="form-control" type="text" id="rut" name="rut" readonly value="<?php echo $row_user['rut']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Local</label>
+                                                    <input class="form-control" type="text" id="local" name="local" value="<?php echo $row_user['local']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Teléfono 1</label>
+                                                    <input class="form-control" type="text" id="telefono1" name="telefono1" value="<?php echo $row_user['telefono1']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Teléfono 2</label>
+                                                    <input class="form-control" type="telefono2" id="telefono2" name="telefono2" value="<?php echo $row_user['telefono2']; ?>">
+                                                </div>
+                                                <div class="form-group" style="font-size: 18px;">
+                                                    <label>Dirección</label>
+                                                    <input class="form-control" style="height: 80px;" type="text" id="direccion" name="direccion" value="<?php echo $row_user['direccion']; ?>">
+                                                </div>
+                                                <input type="hidden" name="cliente" value="empresa">
 
-                                            <div class="form-group" style="font-size: 18px;">
-                                                <label>E-mail</label>
-                                                <input class="form-control" type="E-mail" id="correoElectronico" name="correo" readonly value="<?php echo $row_user['correo']; ?>">
+                                            <?php endif; ?>
 
-                                            </div>
-
-                                            <div class="form-group" style="font-size: 18px;">
-                                                <label>Teléfono 1</label>
-                                                <input type="" class="form-control" type="E-mail" id="telefono1" name="telefono1" value="<?php echo $row_user['telefono1']; ?>">
-
-                                            </div>
-
-                                            <div class="form-group" style="font-size: 18px;">
-                                                <label>Teléfono 2</label>
-                                                <input class="form-control" type="E-mail" id="telefono2" name="telefono2" value="<?php echo $row_user['telefono2']; ?>">
-
-                                            </div>
-
-                                            <div class="form-group" style="font-size: 18px;">
-                                                <label>Pais</label>
-                                                <select class="form-control" name="pais" id="pais">
-
-                                                    <?php include "usuario/pais.php" ?>
-
-                                                </select>
-                                            </div>
-
-
-                                            <div class="form-group" style="font-size: 18px;">
-
-                                                <label for="es">ESTADO</label>
-
-                                                <?php include "usuario/consultas_generales.php" ?>
-                                                <select class="form-control" id="es" name="es" onchange="showselect5(this.value)">
-
-
-
-                                                    <option value="<?php echo $row_user['cod_estado'] ?>" class="fuente"><?php echo $row_user['estado'] ?></option>
-                                                    <?php include "usuario/estados.php" ?>
-
-                                                </select>
-
-
-                                            </div>
-
-
-
-                                            <div class="form-group" style="font-size: 18px;">
-                                                <label>Dirección</label>
-                                                <input class="form-control" style="height: 80px;" type="text" id="direccion" name="direccion" value="<?php echo $row_user['direccion']; ?>">
-
-                                            </div>
-                                            <!--<button type="reset" style="font-size: 18px;" class="btn btn-default">Borrar Todo</button>-->
                                         </form>
                                     </div>
 
