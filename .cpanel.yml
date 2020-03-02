@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tecnofep/public_html/tuautoweb.com
+    - /bin/cp -R /home/tecnofep/repositories/TuAuto $DEPLOYPATH
