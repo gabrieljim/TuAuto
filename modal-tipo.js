@@ -11,6 +11,7 @@ formaPublicar.on("submit", function(e) {
 });
 
 function enviarForma(e) {
+  $.busyLoadFull("show");
   const publicationType = $(".activo-mano")
     .first()
     .attr("data-publication-id");

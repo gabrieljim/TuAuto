@@ -240,7 +240,6 @@ include("usuario/consultas_generales.php");
                                             <!--                                            <h2 class="text-center">Subir Fotos</h2>-->
                                             <!--                                            <p class="text-center"></p>-->
                                             <!--                                        </header>-->
-
                                             <input id="boton-enviar-forma" type="submit" class="btn btn-primary btn-lg btn-block" value="Enviar" style="color: #000; background-color: #feee2c; height: 70px;  display: block; border: none;">
 
                                             <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#miModalpublicacion" style="color: #fff; background-color: #000; margin-top: 20px; height: 70px;  display: block; border: none;">
@@ -342,6 +341,8 @@ include("usuario/consultas_generales.php");
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/busy-load/dist/app.min.css" rel="stylesheet">
     <!-- Bootstrap Js -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Metis Menu Js -->
