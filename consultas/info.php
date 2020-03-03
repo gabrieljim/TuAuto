@@ -131,6 +131,18 @@ echo "<h4><strong>" . number_format($row_ve['precio'], 0, ".", ".") . " USD</str
 
 echo "<h5>Pais: " . $row_ve['pais'] . "</h5>\n";
 echo "<h5>Estado: " . $row_ve['estado'] . "</h5>\n";
+
+switch ($row_ve['tipo_publicacion']) {
+  case 1:
+    $publicacion = "Gold";
+    break;
+  case 2:
+    $publicacion = "Premium";
+    break;
+  default:
+    $publicacion = "Gratuita";
+}
+echo "<h5>Publicacion: $publicacion</h5>\n";
 //     echo "<h5>".$row_ve['pais']." ".$row_ve['estado']." ".$row_ve['provincia']."</h5>\n";
 
 echo "</div>\n";
