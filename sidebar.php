@@ -1,7 +1,7 @@
 <?php $textColor = 'black'; ?>
-<div class="navbar"><img src="<?php echo $row_user['foto'] ?>" style="display: block; width:100px; height: 100px; border-color:black; border-radius: 100%; margin-top: 35px;margin-right: auto; margin-left: auto;">
+<div class="navbar"><img src="<?php echo $row_user['foto'] ?>" style="display: block; width:160px; height: 160px; border-color:black; border-radius: 100%; margin-top: 35px;margin-right: auto; margin-left: auto;">
     <header class="section-header" style="padding-top: 5px;">
-        <h2 class="text-center" style="color: <?= $textColor ?>;font-size: 18px;"><?= $row_user['tipo_cliente'] ? $row_user['nombre_fantasia'] : $row_user['nombre'] ?></h2>
+        <h2 class="text-center" style="color: <?= $textColor ?>;font-size: 18px; font-weight: bold;"><?= $row_user['tipo_cliente'] ? $row_user['nombre_fantasia'] : $row_user['nombre'] ?></h2>
         <p class="text-center" style="color: <?= $textColor ?>  ;"><?php echo $row_user['tipo_cliente'] ? 'Empresa' : 'Usuario' ?></p>
     </header>
 </div>

@@ -52,11 +52,12 @@ include("usuario/consultas_generales.php");
 
         }
 
-        function foto() {
-
-            $('#modal_articulo_imagen').modal('show');
-
-
+        function foto($banner = false) {
+            if ($banner) {
+                $('#modal_articulo_banner').modal('show');
+            } else {
+                $('#modal_articulo_imagen').modal('show');
+            }
         }
     </script>
 
@@ -142,6 +143,34 @@ include("usuario/consultas_generales.php");
     <!--</form>-->
 
 
+    <!-- Modal para cambiar banner -->
+    <div class="modal fade" id="modal_articulo_banner">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Banner</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <!-- Contenido -->
+                <div class="main py-2">
+                    <form id="uploadBanner" action="usuario/banner.php" method="post" enctype="multipart/form-data">
+                        <!-- <hr id="line" > -->
+                        <div id="selectBanner">
+                            <div class="form-group px-5 py-2">
+                                <label for="exampleFormControlFile1" class="mb-2">Selecciona una imagen</label>
+                                <input type="file" class="form-control-file" id="fileBanner" name="fileBanner">
+                            </div>
+                            <div class="form-group mx-5">
+                                <button type="submit" class="btn btn-submit mt-3">Cargar imagen</button>
+                                <!-- <input type="submit" value="Cargar imagen" class="btn btn-submit mt-3" /> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Fin Contenido -->
+            </div>
+        </div>
+    </div>
 
 
 
@@ -279,6 +308,11 @@ include("usuario/consultas_generales.php");
 
                                     <!-- /.col-lg-6 (nested) -->
                                     <div class="col-lg-6" style="margin-top: 0px; padding-top: 80px;">
+
+                                        <img src="<?php echo $row_user['foto_banner'] ?>" style="display: block; width: 300px;  height: 150px; margin-right: auto; margin-left: auto;">
+
+                                        <p class="text-center" id="timagen" onClick="foto(true)" href="#" style="cursor: pointer;">Cambiar Banner</p>
+
 
                                         <img src="<?php echo $row_user['foto'] ?>" style="display: block; width: 200px;  height: 200px; border-radius: 100%; margin-right: auto; margin-left: auto;">
 

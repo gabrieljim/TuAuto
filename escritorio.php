@@ -6,6 +6,8 @@ if (!isset($_SESSION)) {
 include("usuario/consultas_generales.php");
 include("escritorio/publicaciones.php");
 
+$foto_banner = $row_user['foto_banner'];
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -83,7 +85,7 @@ include("escritorio/publicaciones.php");
             <div id="page-wrapper">
 
                 <?php if ($row_user['tipo_cliente'] == '1') { ?>
-                    <div id="banner"><img src="<?php echo $row_user['foto_banner'] ?>" alt=""></div>
+                    <div id="banner" style="background-image: url(<?= $foto_banner ?>); background-size:cover !important;"></div>
                 <?php } ?>
                 <div id="page-inner">
                     <div class="row">

@@ -101,12 +101,6 @@ echo "</div>\n";
 
 echo "<h4><strong class 'fuentebold'>" . $row_ve['marca'] . " " . $row_ve['modelo'] . " " . $row_ve['ano'] . "</strong></h4>\n";
 
-echo "<h4><strong>Notas del Vendedor</strong></h4>\n";
-
-echo " ";
-
-echo "<h5>" . $row_ve['descripcion'] . "</h5>\n";
-
 echo "<h4><strong>Informaci&oacuten B&aacutesica</strong></h4>\n";
 
 echo "<h5><strong>Combustible:</strong> " . $row_ve['combustible'] . "</h5>\n";
@@ -116,6 +110,12 @@ echo "<h5><strong>Transmisi&oacuten:</strong> " . $row_ve['transmision'] . "</h5
 echo "<h5><strong>Color:</strong> " . $row_ve['color'] . "</h5>\n";
 
 echo "<h5><strong>Kilometraje:</strong> " . number_format($row_ve['km'], 0, ".", ".") . " km</h5>\n";
+
+echo "<h4><strong>Notas del Vendedor</strong></h4>\n";
+
+echo " ";
+
+echo "<h5>" . $row_ve['descripcion'] . "</h5>\n";
 
 echo "</div>\n";
 
@@ -132,17 +132,6 @@ echo "<h4><strong>" . number_format($row_ve['precio'], 0, ".", ".") . " USD</str
 echo "<h5>Pais: " . $row_ve['pais'] . "</h5>\n";
 echo "<h5>Estado: " . $row_ve['estado'] . "</h5>\n";
 
-switch ($row_ve['tipo_publicacion']) {
-  case 1:
-    $publicacion = "Gold";
-    break;
-  case 2:
-    $publicacion = "Premium";
-    break;
-  default:
-    $publicacion = "Gratuita";
-}
-echo "<h5>Publicacion: $publicacion</h5>\n";
 //     echo "<h5>".$row_ve['pais']." ".$row_ve['estado']." ".$row_ve['provincia']."</h5>\n";
 
 echo "</div>\n";
@@ -152,8 +141,6 @@ echo "<h4><strong>INFORMACI&OacuteN DEL VENDEDOR</strong></h4>\n";
 echo "<div class='gray-border mb-5 pt-3 px-5 fuentebold'>\n";
 
 echo "<h5>" . $row_ve['nombre'] . " " . $row_ve['apellido'] . "</h5>\n";
-
-echo "<h5>" . $row_ve['direccion'] . "</h5>\n";
 
 echo "<h5>" . $row_ve['telefono1'] . "</h5>\n";
 
