@@ -309,10 +309,11 @@ include("usuario/consultas_generales.php");
                                     <!-- /.col-lg-6 (nested) -->
                                     <div class="col-lg-6" style="margin-top: 0px; padding-top: 80px;">
 
-                                        <img src="<?php echo $row_user['foto_banner'] ?>" style="display: block; width: 300px;  height: 150px; margin-right: auto; margin-left: auto;">
+                                        <?php if ($row_user['tipo_cliente']) : ?>
+                                            <img src="<?php echo $row_user['foto_banner'] ?>" style="display: block; width: 300px;  height: 150px; margin-right: auto; margin-left: auto;">
 
-                                        <p class="text-center" id="timagen" onClick="foto(true)" href="#" style="cursor: pointer;">Cambiar Banner</p>
-
+                                            <p class="text-center" id="timagen" onClick="foto(true)" href="#" style="cursor: pointer;">Cambiar Banner</p>
+                                        <?php endif; ?>
 
                                         <img src="<?php echo $row_user['foto'] ?>" style="display: block; width: 200px;  height: 200px; border-radius: 100%; margin-right: auto; margin-left: auto;">
 
