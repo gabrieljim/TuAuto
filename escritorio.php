@@ -85,7 +85,7 @@ $foto_banner = $row_user['foto_banner'];
             <div id="page-wrapper">
 
                 <?php if ($row_user['tipo_cliente'] == '1') { ?>
-                    <div id="banner" style="background-image: url(<?= $foto_banner ?>); background-size:cover !important;"></div>
+                    <div id="banner" style="background-image: url('<?= $foto_banner ?>'); background-size:cover !important;"></div>
                 <?php } ?>
                 <div id="page-inner">
                     <div class="row">

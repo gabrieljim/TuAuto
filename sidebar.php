@@ -1,8 +1,15 @@
+<meta name="viewport" content="initial-scale=1.0">
+
 <?php $textColor = 'black'; ?>
 <div class="navbar"><img src="<?php echo $row_user['foto'] ?>" style="display: block; width:160px; height: 160px; border-color:black; border-radius: 100%; margin-top: 35px;margin-right: auto; margin-left: auto;">
     <header class="section-header" style="padding-top: 5px;">
         <h2 class="text-center" style="color: <?= $textColor ?>;font-size: 18px; font-weight: bold;"><?= $row_user['tipo_cliente'] ? $row_user['nombre_fantasia'] : $row_user['nombre'] ?></h2>
         <p class="text-center" style="color: <?= $textColor ?>  ;"><?php echo $row_user['tipo_cliente'] ? 'Empresa' : 'Usuario' ?></p>
+        <style>
+            #map {
+                height: 250px;
+            }
+        </style>
     </header>
 </div>
 <?php
@@ -74,7 +81,13 @@ switch ($selected) {
     </li>
     <li> <a href="usuario/close.php"><i class="fa fa-sign-out"></i>Cerrar Sesión</a>
     </li>
+    <li style="width: 100%; height: 100%; padding: 10px">
+        <div id="map" data-address="<?= $row_user['direccion'] ?>"></div>
+    </li>
+
 <?php endif ?>
+
 
 <script src="assets/js/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="sidebar.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1BXqRzi7eMm_MyX864abW74dCbkZNCl0&callback=initMap" async defer></script>
